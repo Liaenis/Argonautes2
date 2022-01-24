@@ -23,6 +23,10 @@ class Argonaute
      */
     private $name;
 
+    public function __construct(){
+        $this->name='temporaire';
+    }
+
     public function getId(): ?int
     {
         return $this->id;
