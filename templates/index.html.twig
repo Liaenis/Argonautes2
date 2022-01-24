@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Argonautes{% endblock %}
+
+{% block body %}
+<style>
+    
+</style>
+<div class="En_Tete">
+    <img src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo" />
+    <h1>Les Argonautes</h1>
+</div>
+<div class="Liste_Argonautes">
+        <h2>Membres de l'équipage</h2>
+        <ul>
+        {% for Argonaute in listeArgonaute %}
+        <li>{{Argonaute.name}}</li>
+        {% endfor %}
+        </ul>
+</div>
+<div class="formulaire">
+    <h2>Enregistrer un nouvel Argonaute<h2>
+    {{form(formulaire)}}
+</div>
+
+<footer>
+  <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
+</footer>
+
+{% endblock %}
